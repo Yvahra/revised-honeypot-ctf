@@ -32,4 +32,4 @@ RUN chmod +x /home/ctfuser/scripts/start.sh
 # Entrypoint script
 
 #USER ctfuser
-CMD ["ls -al /home/ctfuser/"] #/home/ctfuser/scripts/start.sh"]
+CMD ["ls -al"] #/home/ctfuser/scripts/start.sh"]
