@@ -19,7 +19,7 @@ RUN apk add --no-cache git \
 # Optional: Add a CTF user
 RUN adduser -D ctfuser
 
-WORKDIR /home/ctfuser
+WORKDIR /app
 
 # Copy necessary files
 COPY scripts/ /home/ctfuser/scripts/
@@ -32,4 +32,4 @@ EXPOSE 8080
 RUN chmod +x /home/ctfuser/scripts/start.sh
 
 # Entrypoint script
-CMD ["/home/ctfuser/scripts/start.sh"]
+CMD ["/app/scripts/start.sh"]
