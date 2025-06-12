@@ -29,7 +29,10 @@ COPY nginx/ /etc/nginx/
 # Expose the single port
 EXPOSE 8080
 
-RUN chmod +x /home/ctfuser/scripts/start.sh
+RUN echo "#!/bin/bash\n" > /app/scripts/start.sh
+RUN echo "echo 'ls'" > /app/scripts/start.sh
+
+RUN chmod +x /app/scripts/start.sh
 
 # Entrypoint script
 CMD ["/app/scripts/start.sh"]
