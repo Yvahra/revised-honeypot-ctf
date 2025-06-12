@@ -8,7 +8,7 @@ dockerd &
 # Wait for Docker daemon to be ready
 sleep 10
 
-python /app/ssh/start-services.py
+python /app/scripts/start-services.py
 
 # Start Nginx reverse proxy (or SSH proxy)
 nginx &
