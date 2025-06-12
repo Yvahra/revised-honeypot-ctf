@@ -34,5 +34,4 @@ RUN chmod +x /home/ctfuser/scripts/entrypoint.sh
 # Entrypoint script
 
 #USER ctfuser
-
-CMD ["/home/ctfuser/scripts/entrypoint.sh"]
+CMD ["/home/ctfuser/scripts/start.sh"]
