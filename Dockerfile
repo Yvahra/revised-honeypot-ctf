@@ -10,9 +10,9 @@ RUN apk add --no-cache git \
     net-tools \
     iproute2 \
     iptables \
-    dnsutils \
+    #dnsutils \
     python3 \
-    python3-pip \
+    #python3-pip \
     nginx && rm -rf /var/lib/apt/lists/*
 
 
