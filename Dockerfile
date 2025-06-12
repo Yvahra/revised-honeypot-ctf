@@ -2,7 +2,7 @@
 FROM docker:dind
 
 # Set the working directory
-WORKDIR /home/ctfuser
+WORKDIR /app
 
 # INSTALL PACKAGES
 RUN apk add --no-cache git \
@@ -18,18 +18,18 @@ RUN apk add --no-cache git \
 
 # Optional: Add a CTF user
 RUN adduser -D ctfuser
-#RUN groupadd ${SSH_USER}
-#RUN chown ${USER}:${USER} ${JAIL_DIR}
+
+WORKDIR /home/ctfuser
 
 # Copy necessary files
-COPY . .
+COPY scripts/ /home/ctfuser/scripts/
+COPY ssh/ /home/ctfuser/ssh/
 COPY nginx/ /etc/nginx/
 
 # Expose the single port
 EXPOSE 8080
 
 RUN chmod +x /home/ctfuser/scripts/start.sh
-# Entrypoint script
 
-#USER ctfuser
-CMD ["ls"] #/home/ctfuser/scripts/start.sh"]
+# Entrypoint script
+CMD ["/home/ctfuser/scripts/start.sh"]
