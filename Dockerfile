@@ -19,11 +19,9 @@ RUN apk add --no-cache git \
 # Optional: Add a CTF user
 RUN adduser -D ctfuser
 
-WORKDIR /app
-
 # Copy necessary files
-COPY scripts/ /home/ctfuser/scripts/
-COPY ssh/ /home/ctfuser/ssh/
+COPY scripts/ /app/scripts/
+COPY ssh/ /app/ssh/
 COPY nginx/ /etc/nginx/
 
 # Expose the single port
