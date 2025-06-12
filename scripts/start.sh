@@ -3,10 +3,10 @@
 set -e
 
 # Start Docker daemon
-dockerd &
+#dockerd &
 
 # Wait for Docker daemon to be ready
-sleep 10
+#sleep 10
 
 python /app/scripts/start-services.py
 
