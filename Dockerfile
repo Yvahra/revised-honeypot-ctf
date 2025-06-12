@@ -19,7 +19,6 @@ RUN apk add --no-cache git \
 # Optional: Add a CTF user
 RUN adduser -D ctfuser
 #RUN groupadd ${SSH_USER}
-USER ctfuser
 #RUN chown ${USER}:${USER} ${JAIL_DIR}
 WORKDIR /home/ctfuser
 
@@ -33,4 +32,7 @@ EXPOSE 8080
 
 RUN chmod +x /home/ctfuser/scripts/entrypoint.sh
 # Entrypoint script
+
+USER ctfuser
+
 ENTRYPOINT ["/home/ctfuser/scripts/entrypoint.sh"]
