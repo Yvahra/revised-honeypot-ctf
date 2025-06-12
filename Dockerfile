@@ -23,8 +23,7 @@ RUN adduser -D ctfuser
 WORKDIR /home/ctfuser
 
 # Copy necessary files
-COPY scripts/ /home/ctfuser/scripts/
-COPY ssh/ /home/ctfuser/ssh/
+COPY . .
 COPY nginx/ /etc/nginx/
 
 # Expose the single port
