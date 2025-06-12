@@ -30,4 +30,4 @@ EXPOSE 8080
 RUN chmod +x /app/scripts/start.sh
 
 # Entrypoint script
-CMD ["ls", "-R", "/app"] #"./scripts/start.sh"]
+CMD ["/app/scripts/start.sh"]
