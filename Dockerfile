@@ -1,7 +1,11 @@
-FROM docker:latest
+# Use the Docker-in-Docker (DinD) image.
+FROM docker:dind
 
-# Install necessary packages
-RUN apt-get update && apt-get install -y \
+# Set the working directory
+WORKDIR /app
+
+# INSTALL PACKAGES
+RUN apk add --no-cache git \
     openssh-server \
     net-tools \
     iproute2 \
@@ -10,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     nginx && rm -rf /var/lib/apt/lists/*
+
 
 # Optional: Add a CTF user
 RUN useradd -m ctfuser
