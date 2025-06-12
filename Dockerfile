@@ -2,6 +2,7 @@
 FROM docker:dind
 
 # Set the working directory
+WORKDIR /home/ctfuser
 
 # INSTALL PACKAGES
 RUN apk add --no-cache git \
@@ -19,7 +20,6 @@ RUN apk add --no-cache git \
 RUN adduser -D ctfuser
 #RUN groupadd ${SSH_USER}
 #RUN chown ${USER}:${USER} ${JAIL_DIR}
-WORKDIR /home/ctfuser
 
 # Copy necessary files
 COPY . .
@@ -32,4 +32,4 @@ RUN chmod +x /home/ctfuser/scripts/start.sh
 # Entrypoint script
 
 #USER ctfuser
-CMD ["/home/ctfuser/scripts/start.sh"]
+CMD ["ls"] #/home/ctfuser/scripts/start.sh"]
