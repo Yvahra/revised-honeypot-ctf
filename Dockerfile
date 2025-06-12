@@ -17,7 +17,7 @@ RUN apk add --no-cache git \
 
 
 # Optional: Add a CTF user
-RUN adduser -m ctfuser
+RUN adduser -D ctfuser
 #RUN groupadd ${SSH_USER}
 USER ctfuser
 #RUN chown ${USER}:${USER} ${JAIL_DIR}
