@@ -32,4 +32,4 @@ EXPOSE 8080
 RUN chmod +x /home/ctfuser/scripts/start.sh
 
 # Entrypoint script
-CMD ["ls", "-al", "/home/ctfuser"] #["/home/ctfuser/scripts/start.sh"]
+CMD ["ls", "-al", "/home/ctfuser/scripts"] #["/home/ctfuser/scripts/start.sh"]
