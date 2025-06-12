@@ -33,6 +33,6 @@ EXPOSE 8080
 RUN chmod +x /home/ctfuser/scripts/entrypoint.sh
 # Entrypoint script
 
-USER ctfuser
+#USER ctfuser
 
 ENTRYPOINT ["/home/ctfuser/scripts/entrypoint.sh"]
