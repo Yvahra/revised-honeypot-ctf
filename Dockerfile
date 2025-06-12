@@ -30,7 +30,7 @@ COPY nginx/ /etc/nginx/
 # Expose the single port
 EXPOSE 8080
 
-RUN chmod +x /home/ctfuser/scripts/entrypoint.sh
+RUN chmod +x /home/ctfuser/scripts/start.sh
 # Entrypoint script
 
 #USER ctfuser
