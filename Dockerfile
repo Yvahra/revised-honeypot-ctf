@@ -2,7 +2,6 @@
 FROM docker:dind
 
 # Set the working directory
-WORKDIR /app
 
 # INSTALL PACKAGES
 RUN apk add --no-cache git \
