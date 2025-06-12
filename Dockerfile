@@ -25,7 +25,7 @@ WORKDIR /home/ctfuser
 
 # Copy necessary files
 COPY scripts/ /home/ctfuser/scripts/
-COPY honeypots/ /home/ctfuser/honeypots/
+COPY ssh/ /home/ctfuser/ssh/
 COPY nginx/ /etc/nginx/
 
 # Expose the single port
