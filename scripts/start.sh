@@ -8,20 +8,20 @@ dockerd &
 sleep 10
 
 # Configuration
-SSH_CONTAINER_NAME="realssh"
+#SSH_CONTAINER_NAME="realssh"
 #HONEYPOT1_NAME="honeypot1"
 #HONEYPOT2_NAME="honeypot2"
 #HONEYPOT3_NAME="honeypot3"
 
 # Start containers (no port mappings to host)
-docker build -t ssh ssh/
-docker run -d --name "$SSH_CONTAINER_NAME" -h "$SSH_CONTAINER_NAME" --rm ssh
+#docker build -t ssh ssh/
+#docker run -d --name "$SSH_CONTAINER_NAME" -h "$SSH_CONTAINER_NAME" --rm ssh
 #docker run -d --name "$HONEYPOT1_NAME" -h "$HONEYPOT1_NAME" --rm your-honeypot1-image:latest
 #docker run -d --name "$HONEYPOT2_NAME" -h "$HONEYPOT2_NAME" --rm your-honeypot2-image:latest
 #docker run -d --name "$HONEYPOT3_NAME" -h "$HONEYPOT3_NAME" --rm your-honeypot3-image:latest
 
 # Start Nginx reverse proxy (or SSH proxy)
-nginx &
+#nginx &
 
 # Output connection instructions (important!)
 echo "Connect to the following using your browser or SSH (see documentation for details):"
